@@ -115,7 +115,7 @@ MACRO( GEN_ROOT_DICT_SOURCE _dict_src_filename )
     # need to prefix all include dirs with -I
     set( _dict_includes )
     FOREACH( _inc ${ROOT_DICT_INCLUDE_DIRS} )
-        SET( _dict_includes "${_dict_includes}\t-I${_inc}")  #fg: the \t fixes a wired string expansion
+        SET( _dict_includes "${_dict_includes}\t-I${_inc}" )  #fg: the \t fixes a wired string expansion
         #SET( _dict_includes ${_dict_includes} -I${_inc} )
     ENDFOREACH()
 

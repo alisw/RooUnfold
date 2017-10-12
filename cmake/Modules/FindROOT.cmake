@@ -201,7 +201,7 @@ IF( ROOT_CONFIG_EXECUTABLE )
 
         ENDFOREACH()
 
-        IF(NOT(ROOT_VERSION_MAJOR LESS 6))
+        IF(NOT ROOT_VERSION_MAJOR LESS 6)
 	          LIST( APPEND _root_libnames Unfold )
         ENDIF()
 
