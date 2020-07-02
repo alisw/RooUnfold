@@ -886,7 +886,7 @@ TH1* RooUnfold::Resize (TH1* h, Int_t nx, Int_t ny, Int_t nz)
   }
 
   if (mod) {
-    h->SetBinsLength();  // Just copies array, which isn't right for overflows or 2D/3D
+    h->Rebuild();  // Just copies array, which isn't right for overflows or 2D/3D
     Int_t s= h->GetSumw2N();
     Int_t ox= mx+1, oy= my+1, oz= mz+1;  // old overflow bin
     Int_t px= nx+1, py= ny+1, pz= nz+1;  // new overflow bin

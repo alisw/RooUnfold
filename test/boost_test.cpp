@@ -9,7 +9,7 @@ struct GlobalSetup {
 		TH1::AddDirectory(false);
 		gROOT->SetBatch(1);
 		gROOT->ProcessLine("gErrorIgnoreLevel = 1001;");
-		gROOT->ProcessLine("gErrorAbortLevel = 1001;");
+		gROOT->ProcessLine("gErrorAbortLevel = 3001;");
 	}
 	~GlobalSetup() {
 	}
