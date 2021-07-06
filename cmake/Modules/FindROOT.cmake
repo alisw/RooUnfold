@@ -191,8 +191,8 @@ IF( ROOT_CONFIG_EXECUTABLE )
             # extract libnames from -l compiler flags
             STRING( REGEX REPLACE "^-.(.*)$" "\\1" _libname "${_lib}")
 
-            # fix for some root-config versions which export -lz even if using --noauxlibs
-            IF( NOT _libname STREQUAL "z" )
+            # fix for some root-config versions which export -lz and -lfreetype even if using --noauxlibs
+            IF( NOT _libname STREQUAL "z" AND NOT _libname STREQUAL "freetype" )
 
                 # append all library names into a list
                 LIST( APPEND _root_libnames ${_libname} )
